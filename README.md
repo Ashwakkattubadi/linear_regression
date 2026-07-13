@@ -150,5 +150,3 @@ pip install -r requirements.txt
 ## 👨‍💻 Author
 
 **Ashwak Kattubadi**
-
-⭐ If you found this project helpful, consider giving this repository a star!
