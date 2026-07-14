@@ -2,11 +2,16 @@
 
 A beginner-friendly Machine Learning project that predicts **medical insurance charges** using **Linear Regression** with Python and Scikit-learn.
 
-This project demonstrates the complete machine learning workflow—from loading and preprocessing data to training a regression model and evaluating its performance using **R² Score** and **Adjusted R² Score**.
+This repository contains **two implementations**:
+
+* **Basic Linear Regression** – A simple implementation using basic preprocessing.
+* **Feature Engineering + Linear Regression** – An improved version that applies feature engineering techniques before training the model.
+
+The project demonstrates the complete machine learning workflow, from data preprocessing to model evaluation using **R² Score** and **Adjusted R² Score**.
 
 ---
 
-## 📌 Project Overview
+# 📌 Project Overview
 
 Medical insurance costs depend on several factors such as:
 
@@ -15,45 +20,77 @@ Medical insurance costs depend on several factors such as:
 * BMI (Body Mass Index)
 * Number of Children
 * Smoking Status
+* Residential Region
 
-In this project, a Linear Regression model is trained to predict insurance charges based on these features.
+The goal of this project is to build a Linear Regression model that predicts medical insurance charges based on these features.
 
 ---
 
-## 🚀 Features
+# 🚀 Project Files
 
-* Data preprocessing using Pandas
-* Encoding categorical variables
-* Exploratory Data Visualization with Seaborn
+### 📘 1. Basic Linear Regression (`linear_regression.ipynb`)
+
+This notebook covers the fundamental workflow of building a Linear Regression model.
+
+### Includes
+
+* Loading the dataset
+* Label Encoding (`sex` and `smoker`)
+* Basic Data Visualization
 * Train-Test Split
 * Linear Regression Model
-* Prediction of Insurance Charges
-* Model Evaluation using:
+* Prediction
+* R² Score
+* Adjusted R² Score
 
-  * R² Score
-  * Adjusted R² Score
+> **Note:** The `region` column is removed in this notebook. No One-Hot Encoding or Feature Engineering is applied.
 
 ---
 
-## 📂 Dataset
+### 📗 2. Feature Engineering + Linear Regression (`feature_engineering.ipynb`)
+
+This notebook extends the basic model by applying Feature Engineering techniques before training.
+
+### Additional Techniques Used
+
+#### Feature Encoding
+
+* One-Hot Encoding for the `region` column
+
+#### Derived Features
+
+* Underweight Indicator
+* Normal Weight Indicator
+* Overweight Indicator
+
+#### Interaction Features
+
+* `age_smokers`
+* `bmi_smokers`
+
+After creating these additional features, the Linear Regression model is trained again and evaluated.
+
+---
+
+# 📂 Dataset
 
 **Dataset:** `insurance.csv`
 
-### Features
+### Dataset Features
 
 | Column   | Description                                 |
 | -------- | ------------------------------------------- |
 | age      | Age of the person                           |
-| sex      | Gender (Male/Female)                        |
+| sex      | Gender                                      |
 | bmi      | Body Mass Index                             |
-| children | Number of children covered by insurance     |
+| children | Number of children                          |
 | smoker   | Smoking status                              |
 | region   | Residential region                          |
 | charges  | Medical insurance charges (Target Variable) |
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
 
 * Python
 * Pandas
@@ -63,44 +100,44 @@ In this project, a Linear Regression model is trained to predict insurance charg
 
 ---
 
-## 📊 Machine Learning Workflow
+# 📊 Machine Learning Workflow
 
-1. Load the dataset
-2. Convert categorical values into numerical values
-3. Visualize relationships using Seaborn
-4. Split data into training and testing sets
-5. Train a Linear Regression model
-6. Predict insurance charges
-7. Evaluate model performance using:
-
-   * R² Score
-   * Adjusted R² Score
+1. Load Dataset
+2. Data Preprocessing
+3. Feature Encoding
+4. Feature Engineering (Advanced Notebook)
+5. Exploratory Data Analysis
+6. Train-Test Split
+7. Linear Regression
+8. Prediction
+9. Model Evaluation
 
 ---
 
-## 📈 Model Evaluation
+# 📈 Model Evaluation
 
-The model is evaluated using:
+Both notebooks evaluate the model using:
 
 * **R² Score** – Measures how well the model explains the variance in the target variable.
-* **Adjusted R² Score** – Adjusts the R² score by considering the number of input features, helping prevent misleading improvements caused by unnecessary variables.
+* **Adjusted R² Score** – Considers both the model performance and the number of input features.
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```text
 linear_regression/
 │
 ├── insurance.csv
-├── linear_reg.ipynb
+├── linear_regression.ipynb
+├── feature_engineering.ipynb
 ├── README.md
 └── requirements.txt
 ```
 
 ---
 
-## ▶️ How to Run
+# ▶️ How to Run
 
 1. Clone the repository
 
@@ -108,7 +145,7 @@ linear_regression/
 git clone https://github.com/Ashwakkattubadi/linear_regression.git
 ```
 
-2. Navigate to the project folder
+2. Navigate to the project directory
 
 ```bash
 cd linear_regression
@@ -120,34 +157,46 @@ cd linear_regression
 pip install -r requirements.txt
 ```
 
-4. Open the Jupyter Notebook and run all cells.
+4. Open either notebook:
+
+* `linear_regression.ipynb` (Basic Model)
+* `feature_engineering.ipynb` (Feature Engineering Version)
+
+Run all cells.
 
 ---
 
-## 📚 Concepts Practiced
+# 📚 Concepts Practiced
 
 * Data Preprocessing
-* Feature Encoding
+* Label Encoding
+* One-Hot Encoding
+* Derived Features
+* Interaction Features
 * Exploratory Data Analysis (EDA)
-* Linear Regression
 * Train-Test Split
+* Linear Regression
 * Model Prediction
 * R² Score
 * Adjusted R² Score
 
 ---
 
-## 🎯 Future Improvements
+# 🎯 Future Improvements
 
-* Add Multiple Linear Regression with One-Hot Encoding
-* Compare with Ridge and Lasso Regression
-* Perform Feature Engineering
-* Build a Streamlit Web Application
-* Hyperparameter Optimization
+* Feature Scaling
+* Outlier Detection and Treatment
+* Feature Selection
+* Polynomial Regression
+* Ridge Regression
+* Lasso Regression
+* Cross Validation
+* Hyperparameter Tuning
+* Streamlit Deployment
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
 **Ashwak Kattubadi**
 
