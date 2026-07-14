@@ -199,5 +199,3 @@ Run all cells.
 # 👨‍💻 Author
 
 **Ashwak Kattubadi**
-
-⭐ If you found this project helpful, consider giving this repository a star!
