@@ -93,7 +93,7 @@ The model is evaluated using:
 linear_regression/
 │
 ├── insurance.csv
-├── linear_regression.ipynb
+├── linear_reg.ipynb
 ├── README.md
 └── requirements.txt
 ```
