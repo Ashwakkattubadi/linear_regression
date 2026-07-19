@@ -1,13 +1,8 @@
 # 🏥 Insurance Charges Prediction using Linear Regression
 
-A beginner-friendly Machine Learning project that predicts **medical insurance charges** using **Linear Regression** with Python and Scikit-learn.
+A beginner-friendly Machine Learning project that predicts **medical insurance charges** using **Linear Regression** and explores techniques to improve model performance using **Feature Engineering**, **Ridge Regression**, and **Lasso Regression**.
 
-This repository contains **two implementations**:
-
-* **Basic Linear Regression** – A simple implementation using basic preprocessing.
-* **Feature Engineering + Linear Regression** – An improved version that applies feature engineering techniques before training the model.
-
-The project demonstrates the complete machine learning workflow, from data preprocessing to model evaluation using **R² Score** and **Adjusted R² Score**.
+This repository demonstrates the complete machine learning workflow—from data preprocessing and feature engineering to model training, evaluation, and regularization.
 
 ---
 
@@ -22,15 +17,15 @@ Medical insurance costs depend on several factors such as:
 * Smoking Status
 * Residential Region
 
-The goal of this project is to build a Linear Regression model that predicts medical insurance charges based on these features.
+The objective of this project is to build and improve a Linear Regression model that predicts medical insurance charges using these features.
 
 ---
 
-# 🚀 Project Files
+# 🚀 Repository Contents
 
-### 📘 1. Basic Linear Regression (`linear_regression.ipynb`)
+## 📘 1. Basic Linear Regression (`linear_regression.ipynb`)
 
-This notebook covers the fundamental workflow of building a Linear Regression model.
+A beginner-friendly implementation of Linear Regression.
 
 ### Includes
 
@@ -47,28 +42,44 @@ This notebook covers the fundamental workflow of building a Linear Regression mo
 
 ---
 
-### 📗 2. Feature Engineering + Linear Regression (`feature_engineering.ipynb`)
+## 📗 2. Feature Engineering (`feature_engineering.ipynb`)
 
-This notebook extends the basic model by applying Feature Engineering techniques before training.
+Builds upon the basic model by applying Feature Engineering techniques before training.
 
-### Additional Techniques Used
-
-#### Feature Encoding
+### Feature Encoding
 
 * One-Hot Encoding for the `region` column
 
-#### Derived Features
+### Derived Features
 
 * Underweight Indicator
 * Normal Weight Indicator
 * Overweight Indicator
 
-#### Interaction Features
+### Interaction Features
 
 * `age_smokers`
 * `bmi_smokers`
 
-After creating these additional features, the Linear Regression model is trained again and evaluated.
+After creating these additional features, a Linear Regression model is trained and evaluated.
+
+---
+
+## 📙 3. Ridge & Lasso Regularization (`lasso_ridge.ipynb`)
+
+This notebook focuses on improving model generalization using regularization techniques.
+
+### Includes
+
+* Linear Regression (Baseline)
+* Train R² vs Test R² Comparison
+* Underfitting and Overfitting Analysis
+* Ridge Regression
+* Lasso Regression
+* Comparison of Model Performance
+* Regularization using different Alpha values
+
+The notebook demonstrates how regularization helps reduce overfitting and improve model generalization.
 
 ---
 
@@ -94,6 +105,7 @@ After creating these additional features, the Linear Regression model is trained
 
 * Python
 * Pandas
+* NumPy
 * Seaborn
 * Scikit-learn
 * Jupyter Notebook
@@ -105,21 +117,28 @@ After creating these additional features, the Linear Regression model is trained
 1. Load Dataset
 2. Data Preprocessing
 3. Feature Encoding
-4. Feature Engineering (Advanced Notebook)
+4. Feature Engineering
 5. Exploratory Data Analysis
 6. Train-Test Split
 7. Linear Regression
-8. Prediction
-9. Model Evaluation
+8. Model Evaluation
+9. Overfitting & Underfitting Analysis
+10. Ridge Regression
+11. Lasso Regression
+12. Model Comparison
 
 ---
 
 # 📈 Model Evaluation
 
-Both notebooks evaluate the model using:
+The models are evaluated using:
 
-* **R² Score** – Measures how well the model explains the variance in the target variable.
-* **Adjusted R² Score** – Considers both the model performance and the number of input features.
+* R² Score
+* Adjusted R² Score
+* Training R² Score
+* Testing R² Score
+
+The project also compares the performance of Linear Regression, Ridge Regression, and Lasso Regression to analyze the effect of regularization.
 
 ---
 
@@ -131,6 +150,7 @@ linear_regression/
 ├── insurance.csv
 ├── linear_regression.ipynb
 ├── feature_engineering.ipynb
+├── lasso_ridge.ipynb
 ├── README.md
 └── requirements.txt
 ```
@@ -139,30 +159,31 @@ linear_regression/
 
 # ▶️ How to Run
 
-1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Ashwakkattubadi/linear_regression.git
 ```
 
-2. Navigate to the project directory
+### 2. Navigate to the project directory
 
 ```bash
 cd linear_regression
 ```
 
-3. Install the required libraries
+### 3. Install the required libraries
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Open either notebook:
+### 4. Open any notebook
 
-* `linear_regression.ipynb` (Basic Model)
-* `feature_engineering.ipynb` (Feature Engineering Version)
+* `linear_regression.ipynb` – Basic Linear Regression
+* `feature_engineering.ipynb` – Feature Engineering
+* `lasso_ridge.ipynb` – Ridge & Lasso Regularization
 
-Run all cells.
+Run all cells to reproduce the results.
 
 ---
 
@@ -176,26 +197,31 @@ Run all cells.
 * Exploratory Data Analysis (EDA)
 * Train-Test Split
 * Linear Regression
-* Model Prediction
+* Feature Engineering
+* Model Evaluation
 * R² Score
 * Adjusted R² Score
+* Overfitting & Underfitting Detection
+* Ridge Regression
+* Lasso Regression
+* Regularization
 
 ---
 
 # 🎯 Future Improvements
 
 * Feature Scaling
-* Outlier Detection and Treatment
-* Feature Selection
 * Polynomial Regression
-* Ridge Regression
-* Lasso Regression
+* Elastic Net Regression
 * Cross Validation
-* Hyperparameter Tuning
-* Streamlit Deployment
+* Hyperparameter Tuning using GridSearchCV
+* Residual Analysis
+* Model Deployment using Streamlit or Flask
 
 ---
 
 # 👨‍💻 Author
 
 **Ashwak Kattubadi**
+
+⭐ If you found this project useful, consider giving this repository a **Star**.
