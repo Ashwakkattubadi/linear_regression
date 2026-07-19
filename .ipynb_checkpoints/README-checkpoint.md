@@ -216,7 +216,6 @@ Run all cells to reproduce the results.
 * Cross Validation
 * Hyperparameter Tuning using GridSearchCV
 * Residual Analysis
-* Model Deployment using Streamlit or Flask
 
 ---
 
