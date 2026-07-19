@@ -223,5 +223,3 @@ Run all cells to reproduce the results.
 # 👨‍💻 Author
 
 **Ashwak Kattubadi**
-
-⭐ If you found this project useful, consider giving this repository a **Star**.
